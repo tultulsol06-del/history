@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한국의 찬란한 유산 배움터 | 가상 아카이브</title>
+  <meta name="description" content="삼국시대부터 조선시대까지, 한국의 대표적인 건축물과 문화유산을 시대별로 탐방하고 대중교통 및 도보 길 찾기 경로를 안내하는 디지털 배움터입니다.">
+  
+  <!-- 외부 웹 폰트 (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 아이콘 라이브러리 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- 커스텀 스타일시트 연결 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 프리미엄 최상단 바 (학교 홈페이지 스타일 공지 배너) -->
+  <div class="top-banner">
+    <div class="banner-container">
+      <span class="banner-badge"><i class="fas fa-bullhorn"></i> 오늘의 역사 알림</span>
+      <div class="ticker-wrapper">
+        <div class="ticker-text">
+          <span>경주 첨성대에 쓰인 돌은 총 몇 개일까요? 365개 내외로 1년의 일수를 뜻합니다.</span>
+          <span>공주 무령왕릉은 1971년 배수로 공사 도중 아주 우연히 완벽한 상태로 발견되었습니다.</span>
+          <span>합천 해인사 장경판전은 전 세계에서 유일하게 자연 대류 현상만으로 팔만대장경을 700년 넘게 지켜냈습니다.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 학교 포탈 스타일 메인 헤더 -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <div class="logo-seal">
+          <span class="seal-inner">遺</span>
+        </div>
+        <div class="logo-text">
+          <h1 class="logo-title">대한역사문화고등학교</h1>
+          <p class="logo-subtitle">한국 유산 디지털 아카이브 배움터</p>
+        </div>
+      </div>
+      
+      <nav class="nav-menu" id="main-nav">
+        <ul>
+          <li><a href="#" class="nav-item active" data-target="home"><i class="fas fa-home"></i> 홈</a></li>
+          <li><a href="#" class="nav-item" data-target="archive"><i class="fas fa-scroll"></i> 시대별 역사관</a></li>
+          <li><a href="#" class="nav-item" data-target="field-trip"><i class="fas fa-map-marked-alt"></i> 현장 탐방 안내</a></li>
+          <li><a href="#" class="nav-item" data-target="learning"><i class="fas fa-graduation-cap"></i> 온라인 학습방</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 홈 섹션 -->
+  <div id="section-home" class="page-section active">
+    <!-- 웹사이트 메인 비주얼 (Hero Section) -->
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-kicker">KOREAN HERITAGE ARCHIVE</span>
+        <h2 class="hero-title">찬란한 우리 땅의 숨결,<br><span class="highlight-text">문화유산의 맥을 잇다</span></h2>
+        <p class="hero-desc">역사를 잊은 민족에게 미래는 없습니다. 삼국 시대의 기백부터 고려의 과학, 조선의 조화로움까지 조상들의 슬기와 지혜가 깃든 유적지로 가상 여행을 떠나보세요.</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn-primary" id="btn-explore-now">아카이브 탐방 시작 <i class="fas fa-chevron-right"></i></a>
+          <a href="#" class="btn-secondary" id="btn-go-quiz-directly">학습방 바로가기 <i class="fas fa-graduation-cap"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 홈 페이지 대시보드 구조 -->
+    <div class="home-dashboard">
+      <!-- 1. 공지사항 및 학사 일정 -->
+      <div class="dashboard-card notice-widget">
+        <div class="widget-header">
+          <h3><i class="fas fa-bullhorn text-gold"></i> 알림 및 학사공지</h3>
+        </div>
+        <div class="notice-list">
+          <div class="notice-item" data-notice-id="1">
+            <span class="notice-tag notice-important">공지</span>
+            <span class="notice-title">2026학년도 창의적 체험활동 보고서 작성 및 제출 안내</span>
+            <span class="notice-date">06.12</span>
+          </div>
+          <div class="notice-item" data-notice-id="2">
+            <span class="notice-tag notice-normal">모집</span>
+            <span class="notice-title">여름방학 '찬란한 역사 탐방 동아리' 신입 부원 선발</span>
+            <span class="notice-date">06.10</span>
+          </div>
+          <div class="notice-item" data-notice-id="3">
+            <span class="notice-tag notice-normal">안내</span>
+            <span class="notice-title">경주 신라 역사 유적지 야간 개장 견학 및 학생 안전 지도</span>
+            <span class="notice-date">06.08</span>
+          </div>
+          <div class="notice-item" data-notice-id="4">
+            <span class="notice-tag notice-normal">교육</span>
+            <span class="notice-title">온라인 학습방 '골든벨 역사 퀴즈' 및 수료증 발급 개시</span>
+            <span class="notice-date">06.05</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. 이달의 추천 문화유산 -->
+      <div class="dashboard-card featured-widget">
+        <div class="widget-header">
+          <h3><i class="fas fa-star text-gold"></i> 이달의 추천 유산</h3>
+        </div>
+        <div class="featured-card-body">
+          <div class="featured-img-placeholder" id="home-featured-img" style="background-image: url('images/janggyeongpanjeon.png');">
+            <div class="featured-overlay">
+              <span class="featured-badge-period">고려시대</span>
+              <h4>해인사 장경판전 (藏經板殿)</h4>
+            </div>
+          </div>
+          <div class="featured-text">
+            <p>"760년 동안 썩지 않고 지켜낸 팔만대장경의 비밀, 자연 과학적 보존 설계의 극치"</p>
+            <button class="btn-featured-go" data-heritage-id="janggyeongpanjeon">자세히 탐방하기 <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. 오늘의 수라상 (급식) -->
+      <div class="dashboard-card meal-widget">
+        <div class="widget-header">
+          <h3><i class="fas fa-utensils text-gold"></i> 오늘의 역사 급식 (궁중 수라상)</h3>
+          <span class="meal-date">2026-06-15</span>
+        </div>
+        <div class="meal-board">
+          <div class="meal-time">
+            <span class="meal-time-tag">조식 (아침)</span>
+            <p class="meal-menu">흰쌀죽 & 타락죽, 북어보풀, 오이송송이, 꿀, 동치미</p>
+          </div>
+          <div class="meal-time-divider"></div>
+          <div class="meal-time">
+            <span class="meal-time-tag highlight">중식 (점심)</span>
+            <p class="meal-menu">곽탕(미역국), 백미밥, 신선로 정찬, 궁중 갈비찜, 잡채, 배추김치, 오미자차</p>
+          </div>
+          <div class="meal-time-divider"></div>
+          <div class="meal-time">
+            <span class="meal-time-tag">석식 (저녁)</span>
+            <p class="meal-menu">약식, 온면(잔치국수), 조기구이, 애호박전, 곶감쌈, 식혜</p>
+          </div>
+        </div>
+        <div class="meal-footer-info">
+          <span><i class="fas fa-info-circle"></i> 왕실 영양사: 본 식단은 조선 왕실 수라상을 학교 급식 형태로 재현하였습니다.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 시대별 역사관 섹션 -->
+  <div id="section-archive" class="page-section">
+    <main class="main-layout" id="explore-section">
+      <!-- 사이드바: 시대별 필터링 -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <i class="fas fa-book-open"></i>
+          <span>역사 교과 과정 선택</span>
+        </div>
+        <ul class="sidebar-menu">
+          <li>
+            <button class="filter-btn active" data-period="all" id="btn-all">
+              <span class="filter-icon"><i class="fas fa-border-all"></i></span>
+               <span class="filter-label">전체 아카이브</span>
+              <span class="count-badge">6</span>
+            </button>
+          </li>
+          <li>
+            <button class="filter-btn" data-period="three-kingdoms" id="btn-three-kingdoms">
+              <span class="filter-icon"><i class="fas fa-dragon"></i></span>
+              <span class="filter-label">삼국시대 역사관</span>
+              <span class="count-badge">2</span>
+            </button>
+          </li>
+          <li>
+            <button class="filter-btn" data-period="goryeo" id="btn-goryeo">
+              <span class="filter-icon"><i class="fas fa-crown"></i></span>
+              <span class="filter-label">고려시대 역사관</span>
+              <span class="count-badge">1</span>
+            </button>
+          </li>
+          <li>
+            <button class="filter-btn" data-period="joseon" id="btn-joseon">
+              <span class="filter-icon"><i class="fas fa-landmark"></i></span>
+              <span class="filter-label">조선시대 역사관</span>
+              <span class="count-badge">3</span>
+            </button>
+          </li>
+        </ul>
+
+        <div class="sidebar-info-card">
+          <h4><i class="fas fa-info-circle"></i> 온라인 학과 과정</h4>
+          <p>문화유산 탐방은 현장 견학과 연계하여 창의적 체험 활동 보고서로 제출이 가능합니다.</p>
+          <a href="#" class="sidebar-link" id="btn-go-report">보고서 양식 작성 <i class="fas fa-chevron-right"></i></a>
+        </div>
+      </aside>
+
+      <!-- 콘텐츠 그리드: 문화유산 카드 목록 -->
+      <section class="content-area">
+        <div class="section-title-row">
+          <h3 class="section-title"><i class="fas fa-compass"></i> 대표 문화재 및 건축물</h3>
+          <p class="section-subtitle">클릭하면 역사적 해설과 인터랙티브 찾아가는 길(길찾기)을 확인하실 수 있습니다.</p>
+        </div>
+
+        <div class="card-grid" id="card-grid">
+          <!-- JS로 동적 렌더링됨 -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- 현장 탐방 안내 섹션 -->
+  <div id="section-field-trip" class="page-section">
+    <div class="field-trip-layout">
+      <!-- 대중교통 경로 안내 및 가이드 -->
+      <div class="field-trip-sidebar">
+        <div class="section-title-row small-margin">
+          <h3 class="section-title"><i class="fas fa-map-marked-alt"></i> 탐방 길찾기</h3>
+          <p class="section-subtitle">탐색할 문화재와 출발역을 지정하세요.</p>
+        </div>
+
+        <div class="route-search-box">
+          <div class="search-field">
+            <label for="trip-destination-select"><i class="fas fa-monument"></i> 목적지 문화유적지</label>
+            <select id="trip-destination-select" class="styled-select">
+              <!-- 동적 문화재 채워짐 -->
+            </select>
+          </div>
+
+          <div class="search-field">
+            <label for="trip-start-select"><i class="fas fa-plane-departure"></i> 출발 장소 선택</label>
+            <select id="trip-start-select" class="styled-select">
+              <!-- 출발지 채워짐 -->
+            </select>
+          </div>
+        </div>
+
+        <div class="route-summary-card" id="trip-summary-card">
+          <div class="dur-row">
+            <span class="dur-label">예상 소요시간</span>
+            <span class="dur-value" id="trip-duration">약 00분</span>
+          </div>
+          <p class="route-desc-summary" id="trip-summary">선택한 조건의 경로 정보가 로딩됩니다.</p>
+        </div>
+
+        <div class="steps-wrapper map-page-steps">
+          <h5><i class="fas fa-list-ol"></i> 상세 경로 안내</h5>
+          <ul class="route-steps" id="trip-steps">
+            <!-- 단계별 가이드 -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- SVG 맵 시뮬레이터 -->
+      <div class="field-trip-main">
+        <div class="map-container-card">
+          <div class="map-card-header">
+            <span><i class="fas fa-map-marked"></i> 디지털 노선 및 경로 탐방 시뮬레이터</span>
+            <button class="btn-replay-animation" id="btn-replay-trip-anim"><i class="fas fa-redo"></i> 경로 재생</button>
+          </div>
+          <div class="map-canvas-wrapper large-canvas">
+            <!-- SVG 기반 가상 지도 -->
+            <svg id="trip-svg-map" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <pattern id="grid-trip" width="30" height="30" patternUnits="userSpaceOnUse">
+                  <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+                </pattern>
+              </defs>
+              <rect width="600" height="400" fill="url(#grid-trip)" />
+              <path d="M 0 100 Q 150 150 300 100 T 600 150" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="8" />
+              <path d="M 100 0 Q 200 200 100 400" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="12" />
+              <path id="trip-svg-map-path" fill="none" stroke="var(--accent-gold)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+              <circle id="trip-svg-marker-pulse" r="16" fill="rgba(212, 175, 55, 0.2)" />
+              <circle id="trip-svg-marker" r="6" fill="var(--accent-red)" />
+              <g id="trip-svg-map-nodes"></g>
+            </svg>
+            <div class="map-legend">
+              <span><span class="legend-color start"></span> 출발역/터미널</span>
+              <span><span class="legend-color path"></span> 이동 경로</span>
+              <span><span class="legend-color end"></span> 문화유적지</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 안전 수칙 수첩 스타일 -->
+        <div class="safety-guide-card">
+          <h4><i class="fas fa-shield-alt text-gold"></i> 현장체험학습 안전 수칙</h4>
+          <ul>
+            <li><i class="fas fa-check-circle text-gold"></i> 버스 및 전철 이동 중에는 반드시 안전벨트를 착용하고 자리를 지킵니다.</li>
+            <li><i class="fas fa-check-circle text-gold"></i> 문화재 훼손을 방지하기 위해 지정된 경로 이외의 출입 제한 구역은 진입하지 마십시오.</li>
+            <li><i class="fas fa-check-circle text-gold"></i> 유사시에는 비상 연락망(인솔 교사 또는 119)에 즉각 통보하고 지시에 따릅니다.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 온라인 학습방 섹션 -->
+  <div id="section-learning" class="page-section">
+    <div class="learning-layout">
+      <!-- 1. 골든벨 퀴즈 인터페이스 -->
+      <div class="learning-panel quiz-panel">
+        <div class="panel-card">
+          <div class="widget-header">
+            <h3><i class="fas fa-graduation-cap text-gold"></i> 역사 상식 골든벨 퀴즈</h3>
+            <span class="quiz-progress-text" id="quiz-progress">준비 단계</span>
+          </div>
+          
+          <div id="quiz-intro-box" class="quiz-state-box">
+            <div class="quiz-intro-content">
+              <div class="quiz-banner-icon"><i class="fas fa-award"></i></div>
+              <h4>한국 역사 및 문화유산 퀴즈</h4>
+              <p>삼국시대부터 조선시대까지, 배움터에서 제공하는 역사 정보를 기반으로 한 5문항의 채점 퀴즈입니다.</p>
+              <div class="notice-badge-yellow"><i class="fas fa-exclamation-circle"></i> 100점(5문항 만점) 달성 시 디지털 탐방 수료증이 발급됩니다!</div>
+              <button class="btn-primary btn-full" id="btn-start-quiz">골든벨 퀴즈 도전하기 <i class="fas fa-play"></i></button>
+            </div>
+          </div>
+
+          <div id="quiz-play-box" class="quiz-state-box" style="display: none;">
+            <div class="quiz-question-card">
+              <span class="question-number" id="quiz-q-num">Q1.</span>
+              <h4 class="question-text" id="quiz-q-text">질문 내용이 표시됩니다.</h4>
+              <div class="question-options" id="quiz-q-options">
+                <!-- 동적 버튼 생성 -->
+              </div>
+            </div>
+          </div>
+
+          <div id="quiz-result-box" class="quiz-state-box" style="display: none;">
+            <div class="quiz-result-content">
+              <h4 class="result-title">퀴즈 채점 결과</h4>
+              <div class="score-circle-wrapper">
+                <div class="score-circle">
+                  <span class="score-num" id="quiz-score">0</span>
+                  <span class="score-total">/ 100</span>
+                </div>
+              </div>
+              <p class="result-message" id="quiz-result-msg">축하합니다! 대단한 실력입니다.</p>
+              
+              <!-- 만점 시 수료증 발급 입력창 -->
+              <div id="certificate-issuance-form" class="cert-form-box" style="display: none;">
+                <h5>🏅 디지털 탐방 수료증 발급 대상자</h5>
+                <p class="cert-desc">수료증에 표기될 성명을 입력하고 발급 버튼을 누르세요.</p>
+                <div class="form-row inline-row">
+                  <input type="text" id="cert-student-name" class="styled-input" placeholder="성명 입력 (예: 홍길동)">
+                  <button class="btn-primary" id="btn-issue-cert">수료증 받기 <i class="fas fa-certificate"></i></button>
+                </div>
+              </div>
+
+              <!-- 불합격 시 재도전 단추 -->
+              <div id="quiz-retry-box" class="cert-form-box" style="display: none;">
+                <p class="cert-desc">다시 학습하시고 100점 만점에 재도전 해보세요!</p>
+                <button class="btn-primary btn-full" id="btn-retry-quiz">다시 도전하기 <i class="fas fa-redo"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 수료증 인쇄 뷰 (성공 시 노출) -->
+          <div id="certificate-display-card" class="cert-display-card" style="display: none;">
+            <div class="certificate-inner-frame">
+              <div class="cert-watermark">遺</div>
+              <div class="cert-header">
+                <span class="cert-no" id="cert-no-val">제 2026-1004 호</span>
+                <h2 class="cert-main-title">디지털 역사탐방 수료증</h2>
+              </div>
+              <div class="cert-body">
+                <p class="cert-line">성 명 : <strong id="cert-name-val">홍길동</strong></p>
+                <p class="cert-line">본 학생은 대한역사문화고등학교 디지털 역사 탐방실에서 주관하는 한국의 찬란한 역사 및 문화유산 학습 과정을 우수한 성적으로 이수하였으므로 이 수료증을 수여합니다.</p>
+              </div>
+              <div class="cert-date-row">
+                <span id="cert-date-val">2026년 06월 15일</span>
+              </div>
+              <div class="cert-footer">
+                <h3 class="cert-issuer">대한역사문화고등학교장</h3>
+                <div class="cert-seal"></div>
+              </div>
+            </div>
+            <button class="btn-secondary btn-full" id="btn-print-certificate"><i class="fas fa-print"></i> 수료증 인쇄하기</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2. 체험학습 보고서 작성기 -->
+      <div class="learning-panel report-panel">
+        <div class="panel-card">
+          <div class="widget-header">
+            <h3><i class="fas fa-edit text-gold"></i> 창의적 체험활동 보고서 작성기</h3>
+            <span class="report-badge-status">학교 양식</span>
+          </div>
+
+          <div class="report-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="rep-grade"><i class="fas fa-id-card"></i> 학년</label>
+                <input type="number" id="rep-grade" class="styled-input" placeholder="학년" min="1" max="3" value="1">
+              </div>
+              <div class="form-group">
+                <label for="rep-class"><i class="fas fa-users"></i> 반</label>
+                <input type="number" id="rep-class" class="styled-input" placeholder="반" min="1" max="20" value="1">
+              </div>
+              <div class="form-group">
+                <label for="rep-number"><i class="fas fa-list-ol"></i> 번호</label>
+                <input type="number" id="rep-number" class="styled-input" placeholder="번호" min="1" max="40" value="1">
+              </div>
+              <div class="form-group">
+                <label for="rep-name"><i class="fas fa-user"></i> 성명</label>
+                <input type="text" id="rep-name" class="styled-input" placeholder="학생 성명">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="rep-date"><i class="fas fa-calendar-alt"></i> 탐방 일시</label>
+              <input type="date" id="rep-date" class="styled-input" value="2026-06-15">
+            </div>
+
+            <div class="form-group">
+              <label for="rep-destination"><i class="fas fa-landmark"></i> 탐방 유적지</label>
+              <select id="rep-destination" class="styled-select">
+                <!-- 동적 목록 -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="rep-content"><i class="fas fa-feather-alt"></i> 배운 점 및 느낀 점 (창의적 소감)</label>
+              <textarea id="rep-content" class="styled-textarea" placeholder="역사 유산의 아름다움과 과학적 특징을 공부하며 느낀 생각과 교훈을 기술하세요..."></textarea>
+            </div>
+
+            <button class="btn-primary btn-full" id="btn-print-report">체험활동 보고서 출력하기 <i class="fas fa-print"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 상세 보기 모달 창 (Overlay Modal) -->
+  <div class="detail-modal" id="detail-modal">
+    <div class="modal-wrapper">
+      
+      <!-- 모달 좌측 비주얼 장식 패널 -->
+      <div class="modal-side-panel">
+        <div class="panel-glow"></div>
+        <div class="traditional-pattern-top"></div>
+        <div class="chinese-seal-bg" id="modal-chinese-seal">古</div>
+        <div class="panel-info">
+          <span class="heritage-badge" id="detail-period">조선시대</span>
+          <h2 class="heritage-name" id="detail-name">문화재명</h2>
+        </div>
+        <div class="traditional-pattern-bottom"></div>
+      </div>
+
+      <!-- 모달 우측 상세 콘텐츠 패널 -->
+      <div class="modal-content-panel">
+        <button class="modal-close" id="modal-close" aria-label="상세보기 닫기">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="modal-body-container">
+          <p class="heritage-title" id="detail-title">문화유산 한줄 요약</p>
+          
+          <!-- 탭 메뉴 버튼 -->
+          <div class="modal-tabs">
+            <button class="tab-btn active" data-tab="history" id="tab-btn-history"><i class="fas fa-scroll"></i> 역사와 유래</button>
+            <button class="tab-btn" data-tab="architecture" id="tab-btn-architecture"><i class="fas fa-cubes"></i> 건축적 특징</button>
+            <button class="tab-btn" data-tab="directions" id="tab-btn-directions"><i class="fas fa-map-marked-alt"></i> 찾아가는 길</button>
+          </div>
+
+          <!-- 탭 콘텐츠 영역 -->
+          <div class="tab-content-container">
+            
+            <!-- 탭 1: 역사와 유래 -->
+            <div class="tab-content active" id="tab-history">
+              <div class="history-content-wrapper">
+                <h4><i class="fas fa-feather-alt"></i> 역사적 해설</h4>
+                <p class="heritage-desc" id="detail-desc">여기에 역사적 상세 설명이 기술됩니다.</p>
+              </div>
+            </div>
+
+            <!-- 탭 2: 건축적 특징 -->
+            <div class="tab-content" id="tab-architecture">
+              <div class="architecture-content-wrapper">
+                <h4><i class="fas fa-ruler-combined"></i> 건축물 제원</h4>
+                 <p class="heritage-spec" id="detail-spec">여기에 규모 및 구조 형식이 들어갑니다.</p>
+                
+                <h4><i class="fas fa-star"></i> 감상 하이라이트</h4>
+                <ul class="highlights-list" id="detail-highlights-list">
+                  <!-- 주요 특징 목록이 렌더링됨 -->
+                </ul>
+              </div>
+            </div>
+
+            <!-- 탭 3: 찾아가는 길 (인터랙티브 맵 포함) -->
+            <div class="tab-content" id="tab-directions">
+              <div class="directions-container">
+                
+                <!-- 경로 정보 목록 -->
+                <div class="route-info-panel">
+                  <div class="route-selector-row">
+                    <label for="route-start-select"><i class="fas fa-play-circle"></i> 출발지 선택:</label>
+                    <select id="route-start-select" class="styled-select">
+                      <!-- 동적 옵션 렌더링 -->
+                    </select>
+                  </div>
+
+                  <div class="route-summary-card">
+                    <div class="dur-row">
+                      <span class="dur-label">예상 소요시간</span>
+                      <span class="dur-value" id="route-duration">약 00분</span>
+                    </div>
+                    <p class="route-desc-summary" id="route-summary">경로 요약 정보가 표시됩니다.</p>
+                  </div>
+
+                  <div class="steps-wrapper">
+                    <h5><i class="fas fa-list-ol"></i> 상세 경로 단계</h5>
+                    <ul class="route-steps" id="route-steps">
+                      <!-- 단계별 텍스트 및 버스/지하철 뱃지가 들어감 -->
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- 인터랙티브 지도 (SVG 벡터 맵 시뮬레이터) -->
+                <div class="route-map-panel">
+                  <div class="map-header">
+                    <span><i class="fas fa-map-marked"></i> 디지털 노선 및 경로 탐방 시뮬레이터</span>
+                  </div>
+                  <div class="map-canvas-wrapper">
+                    <!-- SVG 기반 가상 지도 -->
+                    <svg id="svg-map" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet">
+                      <!-- 격자 배경 (기술적 느낌을 주는 패턴) -->
+                      <defs>
+                        <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                          <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+                        </pattern>
+                      </defs>
+                      <rect width="600" height="400" fill="url(#grid)" />
+
+                      <!-- 가상의 도로망/지형 흐릿한 장식선들 -->
+                      <path d="M 0 100 Q 150 150 300 100 T 600 150" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="8" />
+                      <path d="M 100 0 Q 200 200 100 400" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="12" />
+
+                      <!-- 경로가 그려질 마스터 패스 -->
+                      <path id="svg-map-path" fill="none" stroke="var(--accent-gold)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+
+                      <!-- 도착점의 맥박 효과를 위한 펄스 서클 -->
+                      <circle id="svg-marker-pulse" r="16" fill="rgba(212, 175, 55, 0.2)" />
+                      <!-- 도착점 마커 점 -->
+                      <circle id="svg-marker" r="6" fill="var(--accent-red)" />
+
+                      <!-- 노드들이 들어올 그룹 -->
+                      <g id="svg-map-nodes"></g>
+                    </svg>
+                    
+                    <div class="map-legend">
+                      <span><span class="legend-color start"></span> 출발지</span>
+                      <span><span class="legend-color path"></span> 이동 경로</span>
+                      <span><span class="legend-color end"></span> 문화유적지</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 공지사항 상세 모달 -->
+  <div class="detail-modal" id="notice-modal">
+    <div class="modal-wrapper notice-modal-wrapper">
+      <button class="modal-close" id="notice-modal-close" aria-label="닫기">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="notice-modal-content">
+        <div class="notice-modal-header">
+          <span class="notice-detail-tag" id="notice-detail-tag">공지</span>
+          <h3 class="notice-detail-title" id="notice-detail-title">공지사항 제목</h3>
+          <div class="notice-detail-meta">
+            <span><i class="fas fa-user"></i> 작성자: <strong id="notice-detail-author">역사교육부</strong></span>
+            <span><i class="fas fa-calendar-alt"></i> 등록일: <strong id="notice-detail-date">2026-06-12</strong></span>
+          </div>
+        </div>
+        <div class="notice-modal-body" id="notice-detail-body">
+          공지사항 상세 내용이 기술됩니다.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 인쇄 출력 레이아웃 (평소엔 hidden, print 미디어 쿼리 시 노출) -->
+  <div id="printable-area"></div>
+
+  <!-- 푸터 영역 -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p class="footer-title">대한역사문화고등학교 디지털 역사 탐방실</p>
+        <p class="footer-text">주소: 경기도 역사구 문화동 1004번지 | 대표전화: 02-1234-5678</p>
+        <p class="footer-copy">&copy; 2026 Korean Heritage School Archive. All Rights Reserved.</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="#">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">관리자 로그인</a>
+        </div>
+        <div class="sns-icons">
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 스크립트 연결 -->
+  <script src="app.js"></script>
+</body>
+</html>
